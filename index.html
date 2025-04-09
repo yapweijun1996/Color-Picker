@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Title -->
+		<title>Advanced Color Picker - Customizable Color Tool for Designers</title>
+		
+		<!-- Meta Description -->
+		<meta name="description" content="Explore our Advanced Color Picker to create and convert colors with ease. Check color contrast and seamlessly switch between HEX, RGB, HSL, and CMYK formats - perfect for designers and developers." />
+		
+		<!-- Meta Keywords -->
+		<meta name="keywords" content="color picker, design tool, color conversion, HEX, RGB, HSL, CMYK, contrast checker, UI design, web design" />
+		
+		<!-- Robots -->
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Canonical Link -->
+		<link rel="canonical" href="https://yourdomain.com/advanced-color-picker" />
+		
+		<!-- Open Graph / Social Media -->
+		<meta property="og:title" content="Advanced Color Picker" />
+		<meta property="og:description" content="Create, refine, and convert colors with our state-of-the-art Advanced Color Picker tool. Ideal for designers & developers." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://yourdomain.com/advanced-color-picker" />
+		<meta property="og:image" content="https://yourdomain.com/path-to-image.jpg" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Advanced Color Picker" />
+		<meta name="twitter:description" content="Discover the Advanced Color Picker to easily manage and convert your color palettes for any design." />
+		<meta name="twitter:image" content="https://yourdomain.com/path-to-image.jpg" />
+		
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body>
+		<div id="colorPickerContainer">
+			<!-- Preview with Contrast Checker -->
+			<div class="preview" id="preview" aria-label="Color Preview">
+				<div id="contrast-text">Example Text</div>
+			</div>
+			<div id="save-instructions">Click the preview to save the current color. <br>Double-click a saved color to remove it.</div>
+			<div class="controls">
+				<!-- Hue Gradient Selector -->
+				<div id="hue-slider" aria-label="Hue Selector">
+					<div id="hue-handle"></div>
+				</div>
+				<!-- 2D Color Picker (Saturation and Brightness) -->
+				<div id="color-picker" aria-label="Saturation and Brightness Picker">
+					<div id="picker-handle"></div>
+				</div>
+				<!-- Color Display/Input Fields with Copy Buttons and Error Messages -->
+				<div class="displays">
+					<div class="field">
+						<label for="hex">HEX:</label>
+						<div class="input-copy">
+							<input type="text" id="hex" placeholder="#ff0000">
+							<button class="copy-btn" data-target="hex" title="Copy HEX">📋</button>
+						</div>
+						<span class="error" id="hex-error"></span>
+					</div>
+					<div class="field">
+						<label for="rgb">RGB:</label>
+						<div class="input-copy">
+							<input type="text" id="rgb" placeholder="rgb(255, 0, 0)">
+							<button class="copy-btn" data-target="rgb" title="Copy RGB">📋</button>
+						</div>
+						<span class="error" id="rgb-error"></span>
+					</div>
+					<div class="field">
+						<label for="hsl">HSL:</label>
+						<div class="input-copy">
+							<input type="text" id="hsl" placeholder="hsl(0, 100%, 50%)">
+							<button class="copy-btn" data-target="hsl" title="Copy HSL">📋</button>
+						</div>
+						<span class="error" id="hsl-error"></span>
+					</div>
+					<div class="field">
+						<label for="cmyk">CMYK:</label>
+						<div class="input-copy">
+							<input type="text" id="cmyk" placeholder="cmyk(0, 100, 100, 0)">
+							<button class="copy-btn" data-target="cmyk" title="Copy CMYK">📋</button>
+						</div>
+						<span class="error" id="cmyk-error"></span>
+					</div>
+				</div>
+			</div>
+			<!-- Saved Colors Panel -->
+			<div id="saved-colors-panel">
+				<h3>Saved Colors</h3>
+				<div id="saved-colors-container"></div>
+			</div>
+		</div>
+		
+		<script src="./script.js"></script>
+	</body>
+</html>
